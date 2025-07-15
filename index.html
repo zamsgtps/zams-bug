@@ -65,20 +65,10 @@
     }
 
     @keyframes slide-left {
-      0% {
-        left: 100vw;
-        opacity: 0;
-      }
-      10% {
-        opacity: 1;
-      }
-      90% {
-        opacity: 1;
-      }
-      100% {
-        left: -100vw;
-        opacity: 0;
-      }
+      0% { left: 100vw; opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { left: -100vw; opacity: 0; }
     }
 
     footer {
@@ -90,15 +80,18 @@
 </head>
 <body class="relative px-4 py-6">
 
-  <!-- Container untuk teks berjalan -->
+  <!-- 🔊 Musik Background -->
+  <audio autoplay loop hidden>
+    <source src="draybergoyang.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Teks Berjalan -->
   <div id="floating-container" class="absolute top-0 left-0 w-full h-full z-10"></div>
 
   <!-- Header -->
   <header class="text-center mb-12 z-20 relative">
     <div class="flex items-center justify-center mb-4">
-      <div class="animate-bounce text-cyan-400 text-6xl drop-shadow-[0_0_15px_#00ffff]">
-        💀
-      </div>
+      <div class="animate-bounce text-cyan-400 text-6xl drop-shadow-[0_0_15px_#00ffff]">💀</div>
     </div>
     <h1 class="text-5xl font-bold title-glow mb-2">ZAMS WANGSAF</h1>
     <p class="text-gray-300 text-lg">Jasa Bug & Murid Bug | Cepat, Aman, Terpercaya 🔥</p>
@@ -106,7 +99,6 @@
 
   <!-- Layanan -->
   <main class="w-full max-w-4xl mx-auto grid md:grid-cols-2 gap-8 relative z-20">
-
     <!-- Jasa Bug -->
     <section class="glass p-6">
       <h2 class="text-2xl font-bold mb-4 text-cyan-300">☠️ Jasa Bug</h2>
@@ -122,7 +114,7 @@
     <!-- Murid Bug -->
     <section class="glass p-6">
       <h2 class="text-2xl font-bold mb-4 text-cyan-300">🤫 Murid Bug</h2>
-      <p class="mb-4 text-gray-200">murbug VVIP, cocok untuk Bug ripper/penipu.</p>
+      <p class="mb-4 text-gray-200">Belajar bug privat, cocok untuk ripper/penipu.</p>
       <ul class="list-disc text-gray-300 pl-5 space-y-1 text-sm mb-4">
         <li>1 minggu: 15k</li>
         <li>1 Bulan: 35k</li>
@@ -135,44 +127,36 @@
     <section class="glass p-6 col-span-2 text-center">
       <h2 class="text-2xl font-bold mb-4 text-pink-400">🚀 Open Partner</h2>
       <p class="text-gray-300 mb-6 text-sm">
-        Gabung jadi partner VVIP zamsXd dan dapetin full akses semua fitur & dorongan. Langsung DM aja der!
+        Gabung jadi partner resmi ZAMS BUGS dan dapetin full akses semua fitur & dorongan. Langsung DM aja bro!
       </p>
       <a href="https://t.me/zamsXd" target="_blank" class="neon-btn">Join Partner via Telegram</a>
     </section>
-
   </main>
 
   <!-- Footer -->
   <footer class="text-center mt-12 z-20 relative">
-    &copy; 2025 zamsXd. All Rights Reserved.
+    &copy; 2025 ZAMS BUGS. All Rights Reserved.
   </footer>
 
-  <!-- Script untuk teks berjalan random -->
+  <!-- JS Teks Berjalan -->
   <script>
     const container = document.getElementById('floating-container');
     const words = [
       'welcome to zams jasbug dan murbug',
       'fast bug delivery',
-      'murid bug VVIP',
-      'hubungi @zamsXd on Tele!',
-      'trusted💯'
+      'murid bug premium',
+      'hubungi @zamsXd sekarang!',
+      'trusted bug service 💯'
     ];
 
     function showText() {
       const text = document.createElement('div');
       text.classList.add('floating-text');
       text.textContent = words[Math.floor(Math.random() * words.length)];
-
-      const top = Math.floor(Math.random() * 90); // 0–90vh
-      text.style.top = `${top}vh`;
-
+      text.style.top = `${Math.floor(Math.random() * 90)}vh`;
       container.appendChild(text);
-
-      setTimeout(() => {
-        text.remove();
-      }, 10000);
-
-      setTimeout(showText, 3000); // tiap 3 detik muncul 1 teks baru
+      setTimeout(() => text.remove(), 10000);
+      setTimeout(showText, 3000);
     }
 
     showText();
