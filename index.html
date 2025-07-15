@@ -15,7 +15,6 @@
       color: #fff;
       min-height: 100vh;
       overflow-x: hidden;
-      overflow-y: auto;
       scroll-behavior: smooth;
     }
 
@@ -101,19 +100,15 @@
 </head>
 <body class="relative px-4 py-6">
 
-  <!-- 🔊 Tombol Play Musik -->
+  <!-- Musik Manual -->
+  <audio id="bg-music" src="draybergoyang.mp3" loop></audio>
   <div class="fixed bottom-6 right-6 z-50">
     <button onclick="document.getElementById('bg-music').play()" class="neon-btn">
       🔊 Play Musik
     </button>
   </div>
 
-  <!-- 🎵 Audio -->
-  <audio id="bg-music" loop>
-    <source src="draybergoyang.mp3" type="audio/mpeg" />
-  </audio>
-
-  <!-- 🥶 Background Icons -->
+  <!-- Ikon Background -->
   <div class="bg-emoji emoji-1">🥶</div>
   <div class="bg-emoji emoji-2">🥶</div>
   <div class="bg-emoji emoji-3">🥶</div>
@@ -130,7 +125,7 @@
     <p class="text-gray-300 text-lg">🔥 Jasa Bug & Murid Bug | Cepat, Aman, Terpercaya 🔥</p>
   </header>
 
-  <!-- Layanan -->
+  <!-- Konten Utama -->
   <main class="w-full max-w-5xl mx-auto grid md:grid-cols-2 gap-8 relative z-20">
 
     <!-- Jasa Bug -->
@@ -157,41 +152,58 @@
       <a href="https://t.me/zamsXd" target="_blank" class="neon-btn inline-block">Chat via Telegram</a>
     </section>
 
-    <!-- Open Partner -->
+    <!-- Partner -->
     <section class="glass p-6 col-span-2 text-center">
       <h2 class="text-2xl font-bold mb-4 text-pink-400">🚀 OPEN PARTNER BY ZAMSXD</h2>
       <p class="text-gray-300 mb-4 text-sm leading-relaxed">
         🛒 <strong>BENEFIT 👑</strong><br/>
-        - FREE SCRIPT BUG NO ABAL"<br/>
-        - FREE MURID UBOT VIA TERMUX<br/>
-        - FREE MURID SUNTIK SOSMED📈<br/>
-        - FREE MURID BAN & UNBAN WA / TELE / GMAIL 📱<br/>
-        - FREE MURID BAN IG, TIKTOK 📱<br/>
-        - FREE NOKOS, RENAME SC, UNLIMIT TELE, DLL 🌟<br/>
-        - DI PROMOSIIN, DI ADMININ, FULL DORONGAN 🚀<br/>
-        - FREE MURBUG VVIP, PANEL, JASEB NO UBOT 🔥<br/>
-        🏷 HARGA: <strong>5.000 IDR</strong><br/><br/>
-        PAYMENT VIA QRIS, DANA, GOPAY
+        - FREE SCRIPT BUG<br/>
+        - FREE MURID UBOT, SOSMED, WA, TELE 📱<br/>
+        - FREE RENAME, NOKOS, PANEL, DLL 🔥<br/>
+        - DIPROMOSIIN, DORONGAN FULL ✅<br/>
+        🏷 HARGA: <strong>5.000 IDR</strong><br/>
+        PAYMENT VIA QRIS / DANA / GOPAY
       </p>
       <a href="https://t.me/zamsXd" target="_blank" class="neon-btn">Join Partner via Telegram</a>
     </section>
 
-    <!-- Fake Visitor List -->
+    <!-- Fake Visitor -->
     <section class="glass p-6 mt-10 col-span-2 text-center">
-      <h2 class="text-2xl font-bold text-pink-400 mb-4">👥 Terakhir Mengunjungi:</h2>
-      <ul class="text-sm text-gray-300 space-y-2 font-mono">
-        <li>• @zeroXploit — 1 menit lalu</li>
-        <li>• @ripper404 — 3 menit lalu</li>
-        <li>• @n1ghtm4r3 — 7 menit lalu</li>
-        <li>• @bugfather — 12 menit lalu</li>
-        <li>• @telekiller — 25 menit lalu</li>
-        <li>• @crashbot — 35 menit lalu</li>
-        <li>• @farel_26wk — 59 menit lalu</li>
-        <li>• @zamsXd (YOU) ✅</li>
+      <h2 class="text-2xl font-bold text-pink-400 mb-6">👥 Pengunjung Terbaru</h2>
+      <ul class="space-y-4">
+        <li class="flex justify-between items-center bg-white/5 p-3 rounded-xl">
+          <div class="flex gap-3 items-center">
+            <span class="text-2xl">🧑‍💻</span>
+            <div>
+              <p class="font-bold text-cyan-300">Bian</p>
+              <p class="text-sm text-gray-400">Online Sekarang</p>
+            </div>
+          </div>
+          <span class="text-green-400 font-bold text-sm">🟢 Online</span>
+        </li>
+        <li class="flex justify-between items-center bg-white/5 p-3 rounded-xl">
+          <div class="flex gap-3 items-center">
+            <span class="text-2xl">👾</span>
+            <div>
+              <p class="font-bold text-purple-300">Nico Prmdn</p>
+              <p class="text-sm text-gray-400">4 menit lalu</p>
+            </div>
+          </div>
+          <span class="text-yellow-300 font-bold text-sm">🟡 Baru Masuk</span>
+        </li>
+        <li class="flex justify-between items-center bg-white/5 p-3 rounded-xl">
+          <div class="flex gap-3 items-center">
+            <span class="text-2xl">😎</span>
+            <div>
+              <p class="font-bold text-green-300">Zams Xd (YOU)</p>
+              <p class="text-sm text-gray-400">Online Sekarang</p>
+            </div>
+          </div>
+          <span class="text-green-300 font-bold text-sm">🟢 Online</span>
+        </li>
       </ul>
-      <p class="text-xs text-gray-500 mt-4 italic">⚠️ Data disamarkan demi keamanan server</p>
+      <p class="text-xs text-gray-500 mt-4 italic">⚠️ Data ini hanya visualisasi, bukan data asli</p>
     </section>
-
   </main>
 
   <!-- Footer -->
@@ -199,7 +211,7 @@
     &copy; 2025 zamsXd. All Rights Reserved.
   </footer>
 
-  <!-- Script: Teks Berjalan -->
+  <!-- Floating Text Script -->
   <script>
     const container = document.getElementById('floating-container');
     const words = [
