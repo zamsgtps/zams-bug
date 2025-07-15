@@ -4,76 +4,62 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ZAMS WANGSAF</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
       font-family: 'Poppins', sans-serif;
-      background: radial-gradient(ellipse at center, #0f0c29, #302b63, #24243e);
-      color: white;
-      overflow-x: hidden;
-    }
-
-    .container {
+      background: #0e0e1b;
+      color: #fff;
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem;
+      overflow: hidden;
     }
 
-    .glass-card {
-      background: rgba(255, 255, 255, 0.06);
-      backdrop-filter: blur(20px);
-      border-radius: 1.25rem;
-      padding: 2rem;
-      width: 100%;
-      max-width: 650px;
-      box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
       border: 1px solid rgba(255, 255, 255, 0.08);
-      transition: 0.3s ease;
-      margin-bottom: 2rem;
+      backdrop-filter: blur(20px);
+      border-radius: 1.5rem;
+      box-shadow: 0 0 40px rgba(0, 255, 255, 0.1);
+      transition: all 0.3s ease;
     }
 
-    .glass-card:hover {
-      transform: scale(1.02);
+    .glass:hover {
       box-shadow: 0 0 50px rgba(0, 255, 255, 0.3);
+      transform: scale(1.02);
     }
 
-    .btn {
-      background: linear-gradient(to right, #00f7ff, #00ff94);
-      padding: 10px 24px;
-      border-radius: 9999px;
-      color: black;
+    .neon-btn {
+      background: linear-gradient(90deg, #00f0ff, #00ffa8);
+      color: #000;
+      padding: 0.75rem 1.5rem;
+      border-radius: 999px;
       font-weight: bold;
       transition: all 0.3s ease;
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+      box-shadow: 0 0 20px #00f0ff80;
     }
 
-    .btn:hover {
-      box-shadow: 0 0 35px rgba(0, 255, 255, 0.6);
+    .neon-btn:hover {
+      box-shadow: 0 0 30px #00f0ff;
       transform: scale(1.05);
     }
 
-    .section-title {
-      font-size: 1.9rem;
-      font-weight: 700;
+    .title-glow {
+      text-shadow: 0 0 15px #0ff;
       color: #00f0ff;
     }
 
     .floating-text {
       position: absolute;
       white-space: nowrap;
-      font-size: 1.7rem;
-      font-weight: 700;
+      font-size: 1.4rem;
+      font-weight: bold;
       font-style: italic;
       color: white;
-      animation: slide-left 8s linear forwards;
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+      animation: slide-left 10s linear forwards;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
       pointer-events: none;
       user-select: none;
     }
@@ -96,99 +82,97 @@
     }
 
     footer {
+      color: #777;
       margin-top: 4rem;
       font-size: 0.9rem;
-      color: #aaa;
     }
   </style>
 </head>
-<body>
-  <div id="floating-container"></div>
+<body class="relative px-4 py-6">
 
-  <div class="container text-center">
+  <!-- Container untuk teks berjalan -->
+  <div id="floating-container" class="absolute top-0 left-0 w-full h-full z-10"></div>
 
-    <h1 class="text-5xl font-bold text-cyan-400 mb-4 tracking-wide drop-shadow-md">ZAMS WANGSAF</h1>
-    <p class="text-gray-300 text-lg mb-12">🔥 Jasa Bug & Murid Bug — Aman, Terpercaya, dan SATSET 🔥</p>
+  <!-- Header -->
+  <header class="text-center mb-12 z-20 relative">
+    <div class="flex items-center justify-center mb-4">
+      <div class="animate-bounce text-cyan-400 text-6xl drop-shadow-[0_0_15px_#00ffff]">
+        💀
+      </div>
+    </div>
+    <h1 class="text-5xl font-bold title-glow mb-2">ZAMS WANGSAF</h1>
+    <p class="text-gray-300 text-lg">Jasa Bug & Murid Bug | Cepat, Aman, Terpercaya 🔥</p>
+  </header>
+
+  <!-- Layanan -->
+  <main class="w-full max-w-4xl mx-auto grid md:grid-cols-2 gap-8 relative z-20">
 
     <!-- Jasa Bug -->
-    <div class="glass-card">
-      <h2 class="section-title mb-3">☠️ Jasa Bug ☠️</h2>
-      <p class="mb-4 text-gray-200">Layanan bug WhatsApp. Dikerjakan cepat, aman & siap kirim!</p>
-      <ul class="list-disc pl-5 mb-4 text-sm text-gray-300 text-left space-y-1">
+    <section class="glass p-6">
+      <h2 class="text-2xl font-bold mb-4 text-cyan-300">☠️ Jasa Bug</h2>
+      <p class="mb-4 text-gray-200">Layanan bug WhatsApp cepat, aman, dan langsung kirim!</p>
+      <ul class="list-disc text-gray-300 pl-5 space-y-1 text-sm mb-4">
         <li>Bug Delay: 5k</li>
         <li>Bug Force Close: 10k</li>
         <li>Bug Custom (by request): 15k</li>
       </ul>
-      <a href="https://t.me/zamsXd" target="_blank" class="btn">Order via Telegram</a>
-    </div>
+      <a href="https://t.me/zamsXd" target="_blank" class="neon-btn inline-block">Order via Telegram</a>
+    </section>
 
     <!-- Murid Bug -->
-    <div class="glass-card">
-      <h2 class="section-title mb-3">🤫 Murid Bug 🤫</h2>
-      <p class="mb-4 text-gray-200">Cocok untuk Bug Ripper sepuasnya.</p>
-      <ul class="list-disc pl-5 mb-4 text-sm text-gray-300 text-left space-y-1">
+    <section class="glass p-6">
+      <h2 class="text-2xl font-bold mb-4 text-cyan-300">🤫 Murid Bug</h2>
+      <p class="mb-4 text-gray-200">murbug VVIP, cocok untuk Bug ripper/penipu.</p>
+      <ul class="list-disc text-gray-300 pl-5 space-y-1 text-sm mb-4">
         <li>1 minggu: 15k</li>
         <li>1 Bulan: 35k</li>
         <li>Permanen: 50k (-2)</li>
       </ul>
-      <a href="https://t.me/zamsXd" target="_blank" class="btn">Buy? Chat via Telegram</a>
-    </div>
+      <a href="https://t.me/zamsXd" target="_blank" class="neon-btn inline-block">Chat via Telegram</a>
+    </section>
 
-    <!-- OPEN PARTNER -->
-    <div class="glass-card text-left">
-      <h2 class="section-title mb-3 text-center">🚀 OPEN PARTNER BY ZAMSXD</h2>
-      <h3 class="text-pink-300 text-xl font-semibold text-center mb-4">🛒 BENEFIT 👑</h3>
-      <ul class="list-disc pl-6 text-sm text-gray-300 space-y-1">
-        <li>FREE SCRIPT BUG NO ABAL" 👑</li>
-        <li>FREE MURID UBOT VIA TERMUX</li>
-        <li>FREE MURID SUNTIK SOSMED 📈</li>
-        <li>FREE MURID BAN TELE 📱</li>
-        <li>FREE MURID UNBAN TELE 📱</li>
-        <li>FREE MURID BAN WA 📱</li>
-        <li>FREE MURID UNBAN WA 📱</li>
-        <li>FREE MURID UNBAN GMAIL 📱</li>
-        <li>FREE MURID BAN TIKTOK 📱</li>
-        <li>FREE MURID BAN INSTAGRAM 📱</li>
-        <li>FREE MURID NOKOS 🌟</li>
-        <li>FREE MURID UNLIMIT TELE 🔥</li>
-        <li>FREE MURID JASEB NO UBOT 🛍️</li>
-        <li>FREE MURID CRASH TELE ☠️</li>
-        <li>DI PROMOSIIN</li>
-        <li>DI ADMININ ALL CH ✅️</li>
-        <li>FULL DORONGAN 🚀</li>
-        <li>FREE MURBUG VVIP</li>
-        <li>FREE RESELLER PANEL</li>
-        <li>FREE MURID RENAME APK</li>
-        <li>FREE MURID RENAME SC</li>
-      </ul>
-      <p class="mt-4 text-sm text-white font-semibold">🏷️ HARGA: <span class="text-green-300 font-bold">5.000 IDR / 5K</span></p>
-      <p class="text-sm mt-1 text-white">PAYMENT: QRIS, DANA, GOPAY</p>
-      <p class="text-sm mt-1 text-white">📞 CONTACT: <a href="https://t.me/zamsXd" class="text-cyan-300 underline">@zamsXd</a></p>
-    </div>
+    <!-- Open Partner -->
+    <section class="glass p-6 col-span-2 text-center">
+      <h2 class="text-2xl font-bold mb-4 text-pink-400">🚀 Open Partner</h2>
+      <p class="text-gray-300 mb-6 text-sm">
+        Gabung jadi partner VVIP zamsXd dan dapetin full akses semua fitur & dorongan. Langsung DM aja der!
+      </p>
+      <a href="https://t.me/zamsXd" target="_blank" class="neon-btn">Join Partner via Telegram</a>
+    </section>
 
-    <footer class="text-center">
-      &copy; 2025 ZAMS BUGS. All Rights Reserved.
-    </footer>
-  </div>
+  </main>
 
-  <!-- Floating Text Script -->
+  <!-- Footer -->
+  <footer class="text-center mt-12 z-20 relative">
+    &copy; 2025 zamsXd. All Rights Reserved.
+  </footer>
+
+  <!-- Script untuk teks berjalan random -->
   <script>
     const container = document.getElementById('floating-container');
-    let topOffset = 5;
+    const words = [
+      'welcome to zams jasbug dan murbug',
+      'fast bug delivery',
+      'murid bug VVIP',
+      'hubungi @zamsXd on Tele!',
+      'trusted💯'
+    ];
 
     function showText() {
-      container.innerHTML = '';
-
       const text = document.createElement('div');
       text.classList.add('floating-text');
-      text.textContent = 'welcome to zams jasbug dan murbug';
-      text.style.top = `${topOffset}vh`;
+      text.textContent = words[Math.floor(Math.random() * words.length)];
+
+      const top = Math.floor(Math.random() * 90); // 0–90vh
+      text.style.top = `${top}vh`;
+
       container.appendChild(text);
 
-      topOffset += 10;
-      if (topOffset > 90) topOffset = 5;
+      setTimeout(() => {
+        text.remove();
+      }, 10000);
 
-      setTimeout(showText, 8000);
+      setTimeout(showText, 3000); // tiap 3 detik muncul 1 teks baru
     }
 
     showText();
