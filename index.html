@@ -4,13 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ZAMS WANGSAF</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
       background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
       font-family: 'Poppins', sans-serif;
       color: white;
+      overflow: hidden;
     }
 
     .glass-card {
@@ -45,9 +46,32 @@
       font-weight: 700;
       color: #ffd6ff;
     }
+
+    /* Teks berjalan */
+    .floating-text {
+      position: absolute;
+      white-space: nowrap;
+      font-size: 2rem;
+      font-weight: 700;
+      font-style: italic;
+      color: white;
+      animation: slide-left 8s linear forwards;
+    }
+
+    @keyframes slide-left {
+      0% {
+        left: 100vw;
+      }
+      100% {
+        left: -100vw;
+      }
+    }
   </style>
 </head>
-<body class="px-4 py-8">
+<body class="px-4 py-8 relative">
+
+  <!-- Floating teks -->
+  <div id="floating-container"></div>
 
   <!-- Hero Section -->
   <header class="text-center mb-10">
@@ -88,6 +112,29 @@
   <footer class="text-center mt-10 text-sm text-gray-400">
     © 2025 ZAMS BUGS. All Rights Reserved.
   </footer>
+
+  <!-- Script teks berjalan -->
+  <script>
+    const container = document.getElementById('floating-container');
+    let topOffset = 5;
+
+    function showText() {
+      container.innerHTML = ''; // Hapus teks sebelumnya
+
+      const text = document.createElement('div');
+      text.classList.add('floating-text');
+      text.textContent = 'welcome to zams jasbug dan murbug';
+      text.style.top = `${topOffset}vh`;
+      container.appendChild(text);
+
+      topOffset += 10;
+      if (topOffset > 90) topOffset = 5;
+
+      setTimeout(showText, 8000);
+    }
+
+    showText();
+  </script>
 
 </body>
 </html>
