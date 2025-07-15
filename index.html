@@ -80,8 +80,15 @@
 </head>
 <body class="relative px-4 py-6">
 
-  <!-- 🔊 Musik Background -->
-  <audio autoplay loop hidden>
+  <!-- 🔊 Tombol Play Musik -->
+  <div class="fixed bottom-6 right-6 z-50">
+    <button onclick="document.getElementById('bg-music').play()" class="neon-btn">
+      🔊 Play Musik
+    </button>
+  </div>
+
+  <!-- 🎵 Audio Musik -->
+  <audio id="bg-music" loop>
     <source src="draybergoyang.mp3" type="audio/mpeg">
   </audio>
 
@@ -99,6 +106,7 @@
 
   <!-- Layanan -->
   <main class="w-full max-w-4xl mx-auto grid md:grid-cols-2 gap-8 relative z-20">
+
     <!-- Jasa Bug -->
     <section class="glass p-6">
       <h2 class="text-2xl font-bold mb-4 text-cyan-300">☠️ Jasa Bug</h2>
@@ -131,6 +139,7 @@
       </p>
       <a href="https://t.me/zamsXd" target="_blank" class="neon-btn">Join Partner via Telegram</a>
     </section>
+
   </main>
 
   <!-- Footer -->
@@ -138,7 +147,7 @@
     &copy; 2025 ZAMS BUGS. All Rights Reserved.
   </footer>
 
-  <!-- JS Teks Berjalan -->
+  <!-- JS: Teks Berjalan -->
   <script>
     const container = document.getElementById('floating-container');
     const words = [
