@@ -11,34 +11,36 @@
       margin: 0;
       padding: 0;
       font-family: 'Poppins', sans-serif;
-      background: #0e0e1b;
+      background: linear-gradient(135deg, #1e1b2e, #3b1f47, #151522);
       color: #fff;
       min-height: 100vh;
-      overflow: hidden;
+      overflow-x: hidden;
+      overflow-y: auto;
+      scroll-behavior: smooth;
     }
 
     .glass {
       background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(18px);
       border-radius: 1.5rem;
-      box-shadow: 0 0 40px rgba(0, 255, 255, 0.1);
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.15);
       transition: all 0.3s ease;
     }
 
     .glass:hover {
-      box-shadow: 0 0 50px rgba(0, 255, 255, 0.3);
       transform: scale(1.02);
+      box-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
     }
 
     .neon-btn {
       background: linear-gradient(90deg, #00f0ff, #00ffa8);
-      color: #000;
+      color: black;
       padding: 0.75rem 1.5rem;
       border-radius: 999px;
       font-weight: bold;
       transition: all 0.3s ease;
-      box-shadow: 0 0 20px #00f0ff80;
+      box-shadow: 0 0 18px #00f0ff80;
     }
 
     .neon-btn:hover {
@@ -47,7 +49,7 @@
     }
 
     .title-glow {
-      text-shadow: 0 0 15px #0ff;
+      text-shadow: 0 0 15px #00f0ff;
       color: #00f0ff;
     }
 
@@ -72,10 +74,30 @@
     }
 
     footer {
-      color: #777;
-      margin-top: 4rem;
+      color: #999;
       font-size: 0.9rem;
+      margin-top: 3rem;
     }
+
+    /* 🥶 Icon Goyang Background */
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .bg-emoji {
+      position: fixed;
+      font-size: 120px;
+      opacity: 0.08;
+      pointer-events: none;
+      user-select: none;
+      animation: float 8s ease-in-out infinite;
+      z-index: 0;
+    }
+
+    .emoji-1 { top: 10%; left: 8%; }
+    .emoji-2 { bottom: 10%; right: 10%; animation-delay: 2s; }
+    .emoji-3 { top: 40%; left: 45%; animation-delay: 4s; }
   </style>
 </head>
 <body class="relative px-4 py-6">
@@ -87,25 +109,30 @@
     </button>
   </div>
 
-  <!-- 🎵 Audio Musik -->
+  <!-- 🎵 Audio -->
   <audio id="bg-music" loop>
-    <source src="draybergoyang.mp3" type="audio/mpeg">
+    <source src="draybergoyang.mp3" type="audio/mpeg" />
   </audio>
 
+  <!-- 🥶 Background Icons -->
+  <div class="bg-emoji emoji-1">🥶</div>
+  <div class="bg-emoji emoji-2">🥶</div>
+  <div class="bg-emoji emoji-3">🥶</div>
+
   <!-- Teks Berjalan -->
-  <div id="floating-container" class="absolute top-0 left-0 w-full h-full z-10"></div>
+  <div id="floating-container" class="absolute top-0 left-0 w-full h-full z-10 pointer-events-none"></div>
 
   <!-- Header -->
   <header class="text-center mb-12 z-20 relative">
     <div class="flex items-center justify-center mb-4">
-      <div class="animate-bounce text-cyan-400 text-6xl drop-shadow-[0_0_15px_#00ffff]">💀</div>
+      <div class="text-6xl drop-shadow-[0_0_15px_#00ffff] animate-bounce">💀</div>
     </div>
     <h1 class="text-5xl font-bold title-glow mb-2">ZAMS WANGSAF</h1>
-    <p class="text-gray-300 text-lg">Jasa Bug & Murid Bug | Cepat, Aman, Terpercaya 🔥</p>
+    <p class="text-gray-300 text-lg">🔥 Jasa Bug & Murid Bug | Cepat, Aman, Terpercaya 🔥</p>
   </header>
 
   <!-- Layanan -->
-  <main class="w-full max-w-4xl mx-auto grid md:grid-cols-2 gap-8 relative z-20">
+  <main class="w-full max-w-5xl mx-auto grid md:grid-cols-2 gap-8 relative z-20">
 
     <!-- Jasa Bug -->
     <section class="glass p-6">
@@ -133,13 +160,22 @@
 
     <!-- Open Partner -->
     <section class="glass p-6 col-span-2 text-center">
-      <h2 class="text-2xl font-bold mb-4 text-pink-400">🚀 Open Partner</h2>
-      <p class="text-gray-300 mb-6 text-sm">
-        Gabung jadi partner resmi ZAMS BUGS dan dapetin full akses semua fitur & dorongan. Langsung DM aja bro!
+      <h2 class="text-2xl font-bold mb-4 text-pink-400">🚀 OPEN PARTNER BY ZAMSXD</h2>
+      <p class="text-gray-300 mb-4 text-sm leading-relaxed">
+        🛒 <strong>BENEFIT 👑</strong><br/>
+        - FREE SCRIPT BUG NO ABAL"<br/>
+        - FREE MURID UBOT VIA TERMUX<br/>
+        - FREE MURID SUNTIK SOSMED📈<br/>
+        - FREE MURID BAN & UNBAN WA / TELE / GMAIL 📱<br/>
+        - FREE MURID BAN IG, TIKTOK 📱<br/>
+        - FREE NOKOS, RENAME SC, UNLIMIT TELE, DLL 🌟<br/>
+        - DI PROMOSIIN, DI ADMININ, FULL DORONGAN 🚀<br/>
+        - FREE MURBUG VVIP, PANEL, JASEB NO UBOT 🔥<br/>
+        🏷 HARGA: <strong>5.000 IDR</strong><br/><br/>
+        PAYMENT VIA QRIS, DANA, GOPAY
       </p>
       <a href="https://t.me/zamsXd" target="_blank" class="neon-btn">Join Partner via Telegram</a>
     </section>
-
   </main>
 
   <!-- Footer -->
@@ -147,13 +183,13 @@
     &copy; 2025 ZAMS BUGS. All Rights Reserved.
   </footer>
 
-  <!-- JS: Teks Berjalan -->
+  <!-- Script: Teks Berjalan -->
   <script>
     const container = document.getElementById('floating-container');
     const words = [
       'welcome to zams jasbug dan murbug',
       'fast bug delivery',
-      'murid bug premium',
+      'murid bug VVIP only',
       'hubungi @zamsXd sekarang!',
       'trusted bug service 💯'
     ];
@@ -163,6 +199,7 @@
       text.classList.add('floating-text');
       text.textContent = words[Math.floor(Math.random() * words.length)];
       text.style.top = `${Math.floor(Math.random() * 90)}vh`;
+      text.style.color = ["#fff", "#0ff", "#f0f", "#ff0", "#0f0"][Math.floor(Math.random() * 5)];
       container.appendChild(text);
       setTimeout(() => text.remove(), 10000);
       setTimeout(showText, 3000);
