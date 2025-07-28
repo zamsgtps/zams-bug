@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="id">
+<!DOCTYPE html>
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,100 +16,100 @@
       min-height: 100vh;
       overflow-x: hidden;
       scroll-behavior: smooth;
-    }.glass {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(18px);
-  border-radius: 1.5rem;
-  box-shadow: 0 0 30px rgba(0, 255, 255, 0.15);
-  transition: all 0.3s ease;
-}
-
-.glass:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
-}
-
-.neon-btn {
-  background: linear-gradient(90deg, #00f0ff, #00ffa8);
-  color: black;
-  padding: 0.75rem 1.5rem;
-  border-radius: 999px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 18px #00f0ff80;
-}
-
-.neon-btn:hover {
-  box-shadow: 0 0 30px #00f0ff;
-  transform: scale(1.05);
-}
-
-.title-glow {
-  text-shadow: 0 0 15px #00f0ff;
-  color: #00f0ff;
-}
-
-.floating-text {
-  position: absolute;
-  white-space: nowrap;
-  font-size: 1.4rem;
-  font-weight: bold;
-  font-style: italic;
-  color: white;
-  animation: slide-left 10s linear forwards;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
-  pointer-events: none;
-  user-select: none;
-}
-
-@keyframes slide-left {
-  0% { left: 100vw; opacity: 0; }
-  10% { opacity: 1; }
-  90% { opacity: 1; }
-  100% { left: -100vw; opacity: 0; }
-}
-
-footer {
-  color: #999;
-  font-size: 0.9rem;
-  margin-top: 3rem;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
-}
-
-.bg-emoji {
-  position: fixed;
-  font-size: 120px;
-  opacity: 0.08;
-  pointer-events: none;
-  user-select: none;
-  z-index: 0;
-  animation: float 6s ease-in-out infinite;
-}
-
-.emoji-1 { top: 10%; left: 8%; }
-.emoji-2 { bottom: 10%; right: 10%; animation-delay: 2s; }
-.emoji-3 { top: 40%; left: 45%; animation-delay: 4s; }
-
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(18px);
+      border-radius: 1.5rem;
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.15);
+      transition: all 0.3s ease;
+    }
+    .glass:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
+    }
+    .neon-btn {
+      background: linear-gradient(90deg, #00f0ff, #00ffa8);
+      color: black;
+      padding: 0.75rem 1.5rem;
+      border-radius: 999px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 18px #00f0ff80;
+    }
+    .neon-btn:hover {
+      box-shadow: 0 0 30px #00f0ff;
+      transform: scale(1.05);
+    }
+    .title-glow {
+      text-shadow: 0 0 15px #00f0ff;
+      color: #00f0ff;
+    }
+    .floating-text {
+      position: absolute;
+      white-space: nowrap;
+      font-size: 1.4rem;
+      font-weight: bold;
+      font-style: italic;
+      color: white;
+      animation: slide-left 10s linear forwards;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+      pointer-events: none;
+      user-select: none;
+    }
+    @keyframes slide-left {
+      0% { left: 100vw; opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { left: -100vw; opacity: 0; }
+    }
+    footer {
+      color: #999;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    .bg-emoji {
+      position: fixed;
+      font-size: 120px;
+      opacity: 0.08;
+      pointer-events: none;
+      user-select: none;
+      z-index: 0;
+      animation: float 6s ease-in-out infinite;
+    }
+    .emoji-1 { top: 10%; left: 8%; }
+    .emoji-2 { bottom: 10%; right: 10%; animation-delay: 2s; }
+    .emoji-3 { top: 40%; left: 45%; animation-delay: 4s; }
   </style>
 </head>
 <body class="relative px-4 py-6">
   <audio id="bg-music" src="draybergoyang.mp3" loop></audio>
+
   <div class="fixed bottom-6 right-6 z-50">
     <button onclick="document.getElementById('bg-music').play()" class="neon-btn">🔊 Play Musik</button>
-  </div>  <div class="bg-emoji emoji-1">🥶</div>
+  </div>
+
+  <div class="bg-emoji emoji-1">🥶</div>
   <div class="bg-emoji emoji-2">🥶</div>
-  <div class="bg-emoji emoji-3">🥶</div>  <div id="floating-container" class="absolute top-0 left-0 w-full h-full z-10 pointer-events-none"></div>  <header class="text-center mb-12 z-20 relative">
+  <div class="bg-emoji emoji-3">🥶</div>
+
+  <div id="floating-container" class="absolute top-0 left-0 w-full h-full z-10 pointer-events-none"></div>
+
+  <header class="text-center mb-12 z-20 relative">
     <div class="flex items-center justify-center mb-4">
       <div class="text-6xl drop-shadow-[0_0_15px_#00ffff] animate-bounce">💀</div>
     </div>
     <h1 class="text-5xl font-bold title-glow mb-2">ZAMS WANGSAF</h1>
     <p class="text-gray-300 text-lg">🔥 Jasa Bug & Murid Bug 🔥</p>
-  </header>  <main class="w-full max-w-5xl mx-auto grid md:grid-cols-2 gap-8 relative z-20">
+  </header>
+
+  <main class="w-full max-w-5xl mx-auto grid md:grid-cols-2 gap-8 relative z-20">
+    <!-- BAGIAN JASA BUG -->
     <section class="glass p-6">
       <h2 class="text-2xl font-bold mb-4 text-yellow-400">📱 Jasa bug</h2>
       <p class="text-gray-200 mb-3">jasa Bug WhatsApp hp korban langsung mokad☠️.</p>
@@ -118,35 +119,42 @@ footer {
         <li>1x hardbug 6k</li>
         <li>1x goodbug + combo 10k</li>
       </ul>
-      <a href="https://t.me/zamsXd" target="_blank" class="neon-btn inline-block">Order Sekarang</a>
-    </section><section class="glass p-6">
-  <h2 class="text-2xl font-bold mb-4 text-cyan-300">🤫 Murid Bug</h2>
-  <p class="mb-4 text-gray-200">Belajar bug privat, cocok untuk bug ripper/penipu.</p>
-  <ul class="list-disc text-gray-300 pl-5 space-y-1 text-sm mb-4">
-    <li>1 minggu: 15k</li>
-    <li>1 Bulan: 35k</li>
-    <li>Permanen: 50k (-2)</li>
-  </ul>
-  <a href="https://t.me/zamsXd" target="_blank" class="neon-btn inline-block">Chat via Telegram</a>
-</section>
+      <a href="https://pembayaran-jasa-bug.netlify.app/" target="_blank" class="neon-btn inline-block">Order Sekarang</a>
+    </section>
 
-<section class="glass p-6 col-span-2 text-center">
-  <h2 class="text-2xl font-bold mb-4 text-pink-400">🚀 OPEN PARTNER BY ZAMSXD</h2>
-  <p class="text-gray-300 mb-4 text-sm leading-relaxed">
-    🛒 <strong>BENEFIT 👑</strong><br/>
-    - FREE SCRIPT BUG<br/>
-    - FREE MURID UBOT, SOSMED, WA, TELE 📱<br/>
-    - FREE RENAME, NOKOS, PANEL, DLL 🔥<br/>
-    - DIPROMOSIIN, DORONGAN FULL ✅<br/>
-    🏷 HARGA: <strong>5.000 IDR</strong><br/>
-    PAYMENT VIA QRIS / DANA / GOPAY
-  </p>
-  <a href="https://t.me/zamsXd" target="_blank" class="neon-btn">Join Partner via Telegram</a>
-</section>
+    <!-- BAGIAN MURID BUG -->
+    <section class="glass p-6">
+      <h2 class="text-2xl font-bold mb-4 text-cyan-300">🤫 Murid Bug</h2>
+      <p class="mb-4 text-gray-200">Belajar bug privat, cocok untuk bug ripper/penipu.</p>
+      <ul class="list-disc text-gray-300 pl-5 space-y-1 text-sm mb-4">
+        <li>1 minggu: 15k</li>
+        <li>1 Bulan: 35k</li>
+        <li>Permanen: 50k (-2)</li>
+      </ul>
+      <a href="https://t.me/zamsXd" target="_blank" class="neon-btn inline-block">Chat via Telegram</a>
+    </section>
 
-  </main>  <footer class="text-center mt-12 z-20 relative">
+    <!-- BAGIAN PARTNER -->
+    <section class="glass p-6 col-span-2 text-center">
+      <h2 class="text-2xl font-bold mb-4 text-pink-400">🚀 OPEN PARTNER BY ZAMSXD</h2>
+      <p class="text-gray-300 mb-4 text-sm leading-relaxed">
+        🛒 <strong>BENEFIT 👑</strong><br/>
+        - FREE SCRIPT BUG<br/>
+        - FREE MURID UBOT, SOSMED, WA, TELE 📱<br/>
+        - FREE RENAME, NOKOS, PANEL, DLL 🔥<br/>
+        - DIPROMOSIIN, DORONGAN FULL ✅<br/>
+        🏷 HARGA: <strong>5.000 IDR</strong><br/>
+        PAYMENT VIA QRIS / DANA / GOPAY
+      </p>
+      <a href="https://t.me/zamsXd" target="_blank" class="neon-btn">Join Partner via Telegram</a>
+    </section>
+  </main>
+
+  <footer class="text-center mt-12 z-20 relative">
     &copy; 2025 zamsXd. All Rights Reserved.
-  </footer>  <script>
+  </footer>
+
+  <script>
     const container = document.getElementById('floating-container');
     const words = [
       'welcome to zams jasbug dan murbug',
@@ -168,5 +176,6 @@ footer {
     }
 
     showText();
-  </script></body>
+  </script>
+</body>
 </html>
